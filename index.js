@@ -57,7 +57,7 @@ client.on('ready', () => {
         message.channel.send(jokes.rand);
     });
     command(client, "status", message => {
-        const conent = message.conent.replace('!status ', '')
+        const content = message.content.replace('!status ', '')
         //set status?
 
         client.user.setPresence({
@@ -67,7 +67,7 @@ client.on('ready', () => {
             }
         })
 
-    })
+    });
 });
 
 client.login(process.env.DJS_TOKEN);
