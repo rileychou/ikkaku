@@ -60,7 +60,7 @@ client.on('ready', () => {
         const conent = message.conent.replace('!status ', '')
         //set status?
 
-        client.user.setPreference({
+        client.user.setPresence({
             activity: {
                 name: content,
                 type: 0,
