@@ -56,6 +56,18 @@ client.on('ready', () => {
 
         message.channel.send(jokes.rand);
     });
+    command(client, "status", message => {
+        const conent = message.conent.replace('!status ', '')
+        //set status?
+
+        client.user.setPreference({
+            activity: {
+                name: content,
+                type: 0,
+            }
+        })
+
+    })
 });
 
 client.login(process.env.DJS_TOKEN);
