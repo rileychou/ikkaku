@@ -10,8 +10,8 @@ client.on('ready', () => {
         message.channel.send('Pong');
     });
 
-    command(client, 'hello', message => {
-        message.channel.send('Hello ' + message.author.username);
+    command(client, ['hello', 'hi', 'howdy', 'yo', 'sup'], message => {
+        message.channel.send('Hello ' + message.author.username + '!');
     });
 });
 
