@@ -10,8 +10,16 @@ client.on('ready', () => {
         message.channel.send('Pong');
     });
 
-    command(client, ['hello', 'hi', 'howdy', 'yo', 'sup'], message => {
+    command(client, ['hello', 'hi', 'hey', 'howdy', 'yo', 'sup', 'henlo'], message => {
         message.channel.send('Hello ' + message.author.username + '!');
+    });
+
+    command(client, 'help', (message) => {
+        const embed = new Discord.MessageEmbed()
+            .setTitle('Help')
+            .setDescription('Available commands: \n\n `!Ping` - Pong')
+
+        message.channel.send(embed);
     });
 });
 
