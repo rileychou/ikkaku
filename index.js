@@ -17,7 +17,8 @@ client.on('ready', () => {
     command(client, 'help', (message) => {
         const embed = new Discord.MessageEmbed()
             .setTitle('Help')
-            .setDescription('Available commands: \n\n `!Ping` - Pong')
+            .setDescription('Available commands: \n\n `!Ping` - Pong \n `!hello` - ikkaku will greet you')
+            .setColor('#bf8fff')
 
         message.channel.send(embed);
     });
