@@ -11,7 +11,7 @@ client.on('ready', () => {
     });
 
     command(client, 'hello', message => {
-        message.channel.send('Hi' + message.member.username);
+        message.channel.send('Hello ' + message.author.username);
     });
 });
 
