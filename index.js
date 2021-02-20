@@ -13,6 +13,19 @@ client.on('ready', () => {
     command(client, ['hello', 'hi', 'howdy', 'yo', 'sup'], message => {
         message.channel.send('Hello ' + message.author.username + '!');
     });
+
+    command(client, "status", message => {
+        const conent = message.conent.replace('!status ', '')
+        //set status?
+
+        client.user.setPreference({
+            activity: {
+                name: content,
+                type: 0,
+            }
+        })
+
+    })
 });
 
 client.login(process.env.DJS_TOKEN);
