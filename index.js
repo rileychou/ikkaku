@@ -10,7 +10,7 @@ client.on('ready', () => {
         message.channel.send('Pong');
     });
 
-    command(client, ['hello', 'hi', 'hey', 'howdy', 'yo', 'sup', 'henlo'], message => {
+    command(client, ['hello', 'hi', 'hey', 'howdy', 'yo', 'sup', 'henlo', 'hai', 'ello'], message => {
         message.channel.send('Hello ' + message.author.username + '!');
     });
 
@@ -39,6 +39,22 @@ client.on('ready', () => {
             .setColor('#ffdc52')
 
         message.channel.send(embed);
+    });
+
+    command(client, 'fact', message => {
+        let rand = Math.floor(Math.random()*10);
+        const facts = 
+
+
+        message.channel.send(facts[rand]);
+    });
+
+    command(client, 'joke', message => {
+        let rand = Math.floor(Math.random()*10);
+        const jokes = 
+
+
+        message.channel.send(jokes.rand);
     });
 });
 
