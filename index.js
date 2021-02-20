@@ -8,7 +8,11 @@ client.on('ready', () => {
 
     command(client, 'ping', message => {
         message.channel.send('Pong');
-    })
-})
+    });
+
+    command(client, 'hello', message => {
+        message.channel.send('Hi' + message.member.username);
+    });
+});
 
 client.login(process.env.DJS_TOKEN);
