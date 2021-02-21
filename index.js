@@ -49,6 +49,15 @@ client.on('ready', () => {
         message.channel.send(embed);
     });
 
+    command(client, 'link', message => {
+        const embed = new Discord.MessageEmbed()
+            .setTitle('Meeting Link')
+            .setURL('https://us04web.zoom.us/j/71473601155?pwd=YUw0U3h1NllIOFE0TmNMQlBTdGVBZz09')
+            .setDescription('6pm, every other tuesday')
+
+        message.channel.send(embed);
+    });
+
     command(client, 'fact', message => {
         const facts = ["Do you know there are 8 million tons of plastic in the ocean?", 
         "The ocean is home for 95% of life.", "Coral produces its own sunscreen.", 
