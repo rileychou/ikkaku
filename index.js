@@ -10,6 +10,14 @@ client.on('ready', () => {
         message.channel.send('Pong');
     });
 
+    command(client, 'pong', message => {
+        message.channel.send('Ping');
+    });
+
+    command(client, 'save', message => {
+        message.channel.send('the turtles!');
+    });
+
     command(client, ['hello', 'hi', 'hey', 'howdy', 'yo', 'sup', 'henlo', 'hai', 'ello'], message => {
         message.channel.send('Hello ' + message.author.username + '!');
     });
@@ -17,7 +25,7 @@ client.on('ready', () => {
     command(client, 'help', message => {
         const embed = new Discord.MessageEmbed()
             .setTitle('Help')
-            .setDescription("Available commands: \n\n `!ping` - Pong \n `!hello` - ikkaku will greet you \n `!info` - club information \n `!intro` - ikkaku's self introduction")
+            .setDescription("Available commands: \n\n `!ping` - Pong \n `!pong` - Ping \n `!save` - the turtles! \n `!hello` - ikkaku will greet you \n `!info` - club information \n `!intro` - ikkaku's self introduction `!fact` - get an ocean fact \n `!joke` - ikkaku gives a pun \n")
             .setColor('#bf8fff')
 
         message.channel.send(embed);
@@ -43,16 +51,21 @@ client.on('ready', () => {
 
     command(client, 'fact', message => {
         const facts = ["Do you know there are 8 million tons of plastic in the ocean?", 
-        "The ocean is home for 95% of life.", "Coral produces its own sunscreen."];
+        "The ocean is home for 95% of life.", "Coral produces its own sunscreen.", 
+        "The ocean is at least 4 billion years old (to be exact 4.533)", 
+        "The ocean creates more than 50% of the world's oxygen.", "OCC cares about the ocean so much that we’re hosting a beach cleanup in the future!", 
+        "The deepest place in the ocean is called the Mariana Trench.", "Humans have only explored 5% of the ocean", "There are lakes and hidden waterfalls IN the ocean.", 
+        "The ocean is helping you read this message: hundreds of thousands of undersea cables transmit 99% of the world's data.", "It takes 1000 years for the water to complete a full journey around the world", 
+        "230,000 marine animals are known.", "14% of protein consumption comes from fish."];
         let rand = Math.floor(Math.random()*facts.length);
         
         message.channel.send(facts[rand]);
     });
 
     command(client, 'joke', message => {
-        let rand = Math.floor(Math.random()*10);
-        const jokes = 
-
+        const jokes = ["The ocean a-piers to be blue", "I’ve got a remedy for your seasickness, it’s called a pocean!", "If Hogwarts was in the ocean, they would play squidditch", 
+        "Whose music do fish listen to the most? Frank Ocean", "You are jawesome"];
+        let rand = Math.floor(Math.random()*jokes.length);
 
         message.channel.send(jokes[rand]);
     });
