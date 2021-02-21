@@ -42,10 +42,10 @@ client.on('ready', () => {
     });
 
     command(client, 'fact', message => {
-        let rand = Math.floor(Math.random()*10);
-        const facts = 
-
-
+        const facts = ["Do you know there are 8 million tons of plastic in the ocean?", 
+        "The ocean is home for 95% of life.", "Coral produces its own sunscreen."];
+        let rand = Math.floor(Math.random()*facts.length);
+        
         message.channel.send(facts[rand]);
     });
 
@@ -54,7 +54,7 @@ client.on('ready', () => {
         const jokes = 
 
 
-        message.channel.send(jokes.rand);
+        message.channel.send(jokes[rand]);
     });
     command(client, "status", message => {
         const content = message.content.replace('!status ', '')
