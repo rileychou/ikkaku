@@ -31,7 +31,6 @@ client.on('ready', () => {
         meetArr.push(new Date(2021, 3, 27));
         meetArr.push(new Date(2021, 4, 11));
         meetArr.push(new Date(2021, 4, 25));
-        console.log(meetArr);
 
         let nextMeet;
 
