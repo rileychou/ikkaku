@@ -22,6 +22,10 @@ client.on('ready', () => {
         message.channel.send('Hello ' + message.author.username + '!');
     });
 
+    command(client, ['bye', 'byee', 'goodbye', 'byebye'], message => {
+        message.channel.send('Farewell ' + message.author.username + '!');
+    });
+
     command(client, 'next', message => {
         let meetArr = [];
         //make sure you set the month to the actual month number -1. ex. January is 0, February is 1, etc...
@@ -48,7 +52,7 @@ client.on('ready', () => {
     command(client, 'help', message => {
         const embed = new Discord.MessageEmbed()
             .setTitle('Help')
-            .setDescription("Available commands: \n\n `!ping` - Pong \n `!pong` - Ping \n `!save` - the turtles! \n `!hello` - ikkaku will greet you \n `!info` - club information \n `!intro` - ikkaku's self introduction `!fact` - get an ocean fact \n `!joke` - ikkaku gives a pun \n")
+            .setDescription("Available commands: \n\n `!ping` - Pong \n `!pong` - Ping \n `!save` - the turtles! \n `!hello` - ikkaku will greet you `!bye` - ikkaku says bye \n\n `!info` - club information \n `!next` - next meeting date and time \n `!intro` - ikkaku's self introduction `!fact` - get an ocean fact \n `!joke` - ikkaku gives a pun \n ")
             .setColor('#bf8fff')
 
         message.channel.send(embed);
