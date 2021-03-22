@@ -22,6 +22,30 @@ client.on('ready', () => {
         message.channel.send('Hello ' + message.author.username + '!');
     });
 
+    command(client, 'next', message => {
+        let meetArr = [];
+        //make sure you set the month to the actual month number -1. ex. January is 0, February is 1, etc...
+        meetArr.push(new Date(2021, 2, 23));
+        meetArr.push(new Date(2021, 2, 30));
+        meetArr.push(new Date(2021, 3, 13));
+        meetArr.push(new Date(2021, 3, 27));
+        meetArr.push(new Date(2021, 4, 11));
+        meetArr.push(new Date(2021, 4, 25));
+        console.log(meetArr);
+
+        let nextMeet;
+
+        let today = new Date();
+        for (let i = 0; i<meetArr.length; i++){
+            if (today >= meetArr[i]){
+                continue;
+            }
+            nextMeet = meetArr[i];
+            break;
+        }
+        message.channel.send("Our next club meeting is " + nextMeet.toDateString());
+    });
+
     command(client, 'help', message => {
         const embed = new Discord.MessageEmbed()
             .setTitle('Help')
@@ -88,8 +112,13 @@ client.on('ready', () => {
                 type: 0,
             }
         })
-
     });
 });
 
+/*
+when local testing, uncomment config.token, 
+when deployed on heroku, uncomment process.env.DJS_TOKEN
+*/
+
+//client.login(config.token);
 client.login(process.env.DJS_TOKEN);
