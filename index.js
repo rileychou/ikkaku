@@ -29,12 +29,12 @@ client.on('ready', () => {
     command(client, 'next', message => {
         let meetArr = [];
         //make sure you set the month to the actual month number -1. ex. January is 0, February is 1, etc...
-        meetArr.push(new Date(2021, 2, 23));
-        meetArr.push(new Date(2021, 2, 30));
-        meetArr.push(new Date(2021, 3, 13));
-        meetArr.push(new Date(2021, 3, 27));
-        meetArr.push(new Date(2021, 4, 11));
-        meetArr.push(new Date(2021, 4, 25));
+        meetArr.push(new Date(2021, 10, 23));
+        meetArr.push(new Date(2021, 10, 30));
+        meetArr.push(new Date(2021, 11, 13));
+        meetArr.push(new Date(2021, 11, 27));
+        meetArr.push(new Date(2021, 12, 11));
+        meetArr.push(new Date(2021, 12, 25));
 
         let nextMeet;
 
