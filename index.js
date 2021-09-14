@@ -52,7 +52,7 @@ client.on('ready', () => {
     command(client, 'help', message => {
         const embed = new Discord.MessageEmbed()
             .setTitle('Help')
-            .setDescription("Available commands: \n\n `!ping` - Pong \n `!pong` - Ping \n `!save` - the turtles! \n `!hello` - ikkaku will greet you \n `!bye` - ikkaku says bye \n\n `!info` - club information \n `!next` - next meeting date and time \n `!intro` - ikkaku's self introduction `!fact` - get an ocean fact \n `!joke` - ikkaku gives a pun \n ")
+            .setDescription("Available commands: \n\n `!ping` - Pong \n `!pong` - Ping \n `!save` - the turtles! \n `!hello` - ikkaku will greet you \n `!bye` - ikkaku says bye \n\n `!info` - club information \n `!next` - next meeting date and time \n `!intro` - ikkaku's self introduction \n `!fact` - get an ocean fact \n `!joke` - ikkaku gives a pun \n ")
             .setColor('#bf8fff')
 
         message.channel.send(embed);
