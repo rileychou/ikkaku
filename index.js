@@ -29,13 +29,13 @@ client.on('ready', () => {
     command(client, 'next', message => {
         let meetArr = [];
         //make sure you set the month to the actual month number -1. ex. January is 0, February is 1, etc...
-        meetArr.push(new Date(2021, 10, 23));
-        meetArr.push(new Date(2021, 10, 30));
-        meetArr.push(new Date(2021, 11, 13));
-        meetArr.push(new Date(2021, 11, 27));
-        meetArr.push(new Date(2021, 12, 11));
-        meetArr.push(new Date(2021, 12, 25));
-
+//        meetArr.push(new Date(2021, 10, 23));
+//        meetArr.push(new Date(2021, 10, 30));
+//        meetArr.push(new Date(2021, 11, 13));
+//        meetArr.push(new Date(2021, 11, 27));
+//        meetArr.push(new Date(2021, 12, 11));
+//        meetArr.push(new Date(2021, 12, 25));
+/*
         let nextMeet;
 
         let today = new Date();
@@ -47,6 +47,8 @@ client.on('ready', () => {
             break;
         }
         message.channel.send("Our next club meeting is " + nextMeet.toDateString());
+        */
+       message.channel.send("this command is currently under rework, please be patient with us");
     });
 
     command(client, 'help', message => {
@@ -75,15 +77,15 @@ client.on('ready', () => {
 
         message.channel.send(embed);
     });
+//aa why isnt the update working
+//    command(client, 'link', message => {
+//        const embed = new Discord.MessageEmbed()
+//            .setTitle('Meeting Link')
+//            .setURL('https://us04web.zoom.us/j/71473601155?pwd=YUw0U3h1NllIOFE0TmNMQlBTdGVBZz09')
+//            .setDescription('6pm, every other tuesday')
 
-    command(client, 'link', message => {
-        const embed = new Discord.MessageEmbed()
-            .setTitle('Meeting Link')
-            .setURL('https://us04web.zoom.us/j/71473601155?pwd=YUw0U3h1NllIOFE0TmNMQlBTdGVBZz09')
-            .setDescription('6pm, every other tuesday')
-
-        message.channel.send(embed);
-    });
+//        message.channel.send(embed);
+//    });
 
     command(client, 'fact', message => {
         const facts = ["Do you know there are 8 million tons of plastic in the ocean?", 
