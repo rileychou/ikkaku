@@ -77,7 +77,7 @@ client.on('ready', () => {
 
         message.channel.send(embed);
     });
-
+//aa why isnt the update working
 //    command(client, 'link', message => {
 //        const embed = new Discord.MessageEmbed()
 //            .setTitle('Meeting Link')
